@@ -1,0 +1,16 @@
+.header{
+    height: 100vh;
+    background: url(../../images/title.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    &__menu{
+        padding-top: 35px;
+    }
+    &__heading{
+        margin-top: 60px;
+    }
+    &__icon{
+        margin: auto auto 50px;
+    }
+}
