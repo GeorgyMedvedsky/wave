@@ -1,0 +1,38 @@
+@import '../vars';
+@import '../mixins';
+
+.section-subtitle{
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    @include font($primary-font-color, 24px, normal, 400, 116.667%, 0.6px);
+    display: flex;
+    align-items: center;
+    max-width: 220px;
+
+    &_element_1::before{
+        content: url(../../images/sun.svg);
+        margin-right: 10px;
+    }
+    &_element_2::before{
+        content: url(../../images/plane.svg);
+        margin-right: 10px;
+    }
+    &_element_3::before{
+        content: url(../../images/surf.svg);
+        margin-right: 10px;
+    }
+    &_element_4::before{
+        content: url(../../images/wave1.svg);
+        margin-right: 10px;
+    }
+    &_element_5::before{
+        content: url(../../images/wave2.svg);
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+    &_element_6::before{
+        content: url(../../images/wave3.svg);
+        margin-right: 10px;
+        margin-top: 15px;
+    }
+}

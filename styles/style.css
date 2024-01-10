@@ -22,13 +22,6 @@
   margin: auto auto 50px;
 }
 
-.logo {
-  transition: 0.3s;
-}
-.logo:hover, .logo:focus {
-  opacity: 0.4;
-}
-
 .menu {
   display: flex;
   justify-content: space-between;
@@ -87,5 +80,109 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 0.6px;
+}
+
+.section-title {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: #01353E;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+.section-title::after {
+  content: url(../../images/dash.svg);
+  margin-left: 15px;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #242121;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 116.667%;
+  letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
+  max-width: 220px;
+}
+.section-subtitle_element_1::before {
+  content: url(../../images/sun.svg);
+  margin-right: 10px;
+}
+.section-subtitle_element_2::before {
+  content: url(../../images/plane.svg);
+  margin-right: 10px;
+}
+.section-subtitle_element_3::before {
+  content: url(../../images/surf.svg);
+  margin-right: 10px;
+}
+.section-subtitle_element_4::before {
+  content: url(../../images/wave1.svg);
+  margin-right: 10px;
+}
+.section-subtitle_element_5::before {
+  content: url(../../images/wave2.svg);
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.section-subtitle_element_6::before {
+  content: url(../../images/wave3.svg);
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+.about__content {
+  margin-top: 80px;
+  display: grid;
+}
+.about__content_order_1 {
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  row-gap: 30px;
+}
+.about__content_order_2 {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  row-gap: 80px;
+}
+.about__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__info:last-of-type {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  max-width: 500px;
+  justify-self: end;
+}
+.about__subtitle {
+  margin-bottom: 15px;
+}
+
+.text {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #242121;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 128.571%;
   letter-spacing: 0.6px;
 }/*# sourceMappingURL=style.css.map */

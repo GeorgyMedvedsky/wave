@@ -1,0 +1,8 @@
+@import '../vars';
+@import '../mixins';
+
+.text{
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    @include font($primary-font-color, 14px, normal, 300, 128.571%, 0.6px);
+}

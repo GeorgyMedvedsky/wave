@@ -1,0 +1,13 @@
+@import '../vars';
+@import '../mixins';
+
+.section-title{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    @include font($secondary-font-color, 48px, normal, 600, normal, 0.6px);
+
+    &::after{
+        content: url(../../images/dash.svg);
+        margin-left: 15px;
+        }
+}

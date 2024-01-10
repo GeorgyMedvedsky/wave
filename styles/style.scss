@@ -1,6 +1,10 @@
 @use './page/page';
 @use './centering/centering';
 @use './header/header';
-@use './logo/logo';
 @use './menu/menu';
 @use './heading/heading';
+
+@use './section-title/section-title';
+@use './section-subtitle/section-subtitle';
+@use './about/about';
+@use './text/text';
