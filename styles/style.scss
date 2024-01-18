@@ -3,8 +3,16 @@
 @use './header/header';
 @use './menu/menu';
 @use './heading/heading';
-
+@use './button/button';
 @use './section-title/section-title';
 @use './section-subtitle/section-subtitle';
+@use './section/section';
 @use './about/about';
 @use './text/text';
+@use './tabs/tabs';
+@use './gallery/gallery';
+@use './slider/slider';
+@use './rates/rates';
+@use './location/location';
+@use './feedback/feedback';
+@use './footer/footer';

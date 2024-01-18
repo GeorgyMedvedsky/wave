@@ -1,0 +1,22 @@
+@import '../vars';
+@import '../mixins';
+
+.tabs{
+    margin: 0;
+    padding: 50px 0 0;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+
+    &__tab{
+        margin: 0;
+        @include font($primary-font-color, 24px, normal, 400, 75%, 0.6px);
+        transition: .3s;
+
+        &:hover{
+            cursor: pointer;
+            color: $font-color-highlight;
+        }
+    }
+}

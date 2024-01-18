@@ -1,0 +1,12 @@
+@import '../vars';
+@import '../mixins';
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    gap: 50px;
+    background-color: $font-color-highlight;
+    @include font($font-color-light, 24px, normal, 400, 116.667%, 0.6px);
+}

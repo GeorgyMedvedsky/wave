@@ -1,0 +1,16 @@
+@import '../vars';
+@import '../mixins';
+
+.button{
+    padding: 24px 92px;
+    background: none;
+    border: 1px solid #C4C4C4;
+    @include font($primary-font-color, 24px, normal, 400, 75%, 0.6px);
+    transition: .3s;
+
+    &:hover{
+        border: 1px solid $font-color-highlight;
+        color: $font-color-highlight;
+        cursor: pointer;
+    }
+}

@@ -4,10 +4,12 @@
 .section-title{
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
     @include font($secondary-font-color, 48px, normal, 600, normal, 0.6px);
+    text-align: center;
 
     &::after{
-        content: url(../../images/dash.svg);
+        content: url(../../images/icons/dash.svg);
         margin-left: 15px;
         }
 }

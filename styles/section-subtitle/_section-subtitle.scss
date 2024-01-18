@@ -9,29 +9,29 @@
     align-items: center;
     max-width: 220px;
 
-    &_element_1::before{
-        content: url(../../images/sun.svg);
+    &_el_1::before{
+        content: url(../../images/icons/sun.svg);
         margin-right: 10px;
     }
-    &_element_2::before{
-        content: url(../../images/plane.svg);
+    &_el_2::before{
+        content: url(../../images/icons/plane.svg);
         margin-right: 10px;
     }
-    &_element_3::before{
-        content: url(../../images/surf.svg);
+    &_el_3::before{
+        content: url(../../images/icons/surf.svg);
         margin-right: 10px;
     }
-    &_element_4::before{
-        content: url(../../images/wave1.svg);
+    &_el_4::before{
+        content: url(../../images/icons/wave1.svg);
         margin-right: 10px;
     }
-    &_element_5::before{
-        content: url(../../images/wave2.svg);
+    &_el_5::before{
+        content: url(../../images/icons/wave2.svg);
         margin-right: 10px;
         margin-top: 15px;
     }
-    &_element_6::before{
-        content: url(../../images/wave3.svg);
+    &_el_6::before{
+        content: url(../../images/icons/wave3.svg);
         margin-right: 10px;
         margin-top: 15px;
     }
