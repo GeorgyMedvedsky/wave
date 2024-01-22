@@ -4,19 +4,49 @@
 .slider{
     margin-top: 50px;
     height: 800px;
-    background: linear-gradient(rgba(36, 33, 33, 0.3), rgba(36, 33, 33, 0.3)), url(../../images/slider-cover.jpg) center/cover no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
-    
+    position: relative;
+    padding: 50px;
+    box-sizing: border-box;
+
+    &__overlay{
+        background-color: rgba(36, 33, 33, 0.3);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     &__title{
         width: 600px;
-        margin: 0;
+        margin: 200px 0 0;
         @include font($font-color-light, 48px, normal, 400, 116.667%, 0.6px);
+        z-index: 100;
     }
     &__subtitle{
         margin: 0;
         @include font($font-color-light, 14px, normal, 300, 128.571%, 0.6px);
+        z-index: 100;
     }
-}   
+    &__pagination{
+        margin: auto auto 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 15px;
+        z-index: 100;
+    }
+}
+.pagination__item{
+    transition: .3s;
+
+    &:hover{
+        cursor: pointer;
+        opacity: .5;
+    }
+}
