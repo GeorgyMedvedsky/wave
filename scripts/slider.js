@@ -40,38 +40,59 @@ const initialImages = [
         '_id': 8
     }
 ];
-// tabs colors
+
 const ACTIVE_TAB_COLOR = '#00B2A0';
 const DEFAULT_TAB_COLOR = '#FFFFFF';
-// init elements
-const slider = document.querySelector('.slider');
-const tabs = Array.from(slider.querySelectorAll('.pagination__item'));
-// init default state
-tabs[0].style.fill = ACTIVE_TAB_COLOR;
-slider.style.backgroundImage = `url(${initialImages[0].url})`
-// add listener
-tabs.forEach(tab => {
-    tab.addEventListener('click', evt => handleSlider(evt));
-});
-// slider logic
-function handleSlider(evt){
-    let currentTab = evt.target;
 
-    toggleTab(currentTab);
-    toggleImage(currentTab);
-}
-// tab switching logic
-function toggleTab(currentTab){
-    tabs.find(tab => tab.id === currentTab.id).style.fill = ACTIVE_TAB_COLOR;
-    tabs.forEach(tab => {
-        if(tab.id !== currentTab.id){
-            tab.style.fill = DEFAULT_TAB_COLOR;
-        }
-    });
-}
-// image switching logic
-function toggleImage(currentTab){
-    let currentImage = initialImages.find(image => image._id === +currentTab.id)
+function slider(){
+    const slider = document.querySelector('.slider');
+    const tabs = Array.from(slider.querySelectorAll('.pagination__item'));
+    let currentTab = tabs[0];
+    let timerId = null;
+
+    currentTab.style.fill = ACTIVE_TAB_COLOR;
+    slider.style.backgroundImage = `url(${initialImages[0].url})`;
     
-    slider.style.backgroundImage = `url(${currentImage.url})`
+    tabs.forEach(tab => {
+        tab.addEventListener('click', evt => handleSlider(evt));
+    });
+    timerId = autoscroll(currentTab);
+
+    function handleSlider(evt){
+        clearInterval(timerId);
+        currentTab = evt.target;
+        handlerTabSwitch(currentTab);
+        handleImageSwitch(currentTab);
+        setTimeout(() => timerId = autoscroll(currentTab), 12000);
+    }
+    function handlerTabSwitch(currentTab){
+        tabs.find(tab => tab.id === currentTab.id).style.fill = ACTIVE_TAB_COLOR;
+        tabs.forEach(tab => {
+            if(tab.id !== currentTab.id){
+                tab.style.fill = DEFAULT_TAB_COLOR;
+            }
+        });
+    };
+    function handleImageSwitch(currentTab){
+        let currentImage = initialImages.find(image => image._id === Number(currentTab.id));
+        slider.style.backgroundImage = `url(${currentImage.url})`;
+    }
+    function autoscroll(currentTab){
+        // let limit = 0;
+        let tabIndex = tabs.indexOf(currentTab);
+        return setTimeout(function tic(){
+            // limit++;
+            if(tabIndex === tabs.length){
+                tabIndex = 0;
+            } else {
+                handlerTabSwitch(tabs[tabIndex]);
+                handleImageSwitch(tabs[tabIndex]);
+                tabIndex++;
+            }
+            timerId = setTimeout(tic, 5000);
+            // if(limit === 50) clearTimeout(timerId);
+        }, 5000);
+    }
 }
+
+slider();
