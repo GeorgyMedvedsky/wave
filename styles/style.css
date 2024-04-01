@@ -24,7 +24,7 @@
 }
 .header {
   height: 100vh;
-  background: url(../../images/title.jpg) center/cover no-repeat;
+  background: url("../../images/title.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -220,7 +220,9 @@
   letter-spacing: 0.6px;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  width: -moz-min-content;
+  width: min-content;
 }
 .section-subtitle__icon {
   margin-right: 15px;

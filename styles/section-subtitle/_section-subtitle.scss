@@ -7,7 +7,8 @@
     @include font($primary-font-color, 24px, normal, 400, 116.667%, 0.6px);
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    width: min-content;
 
     &__icon{
         margin-right: 15px;
