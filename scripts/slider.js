@@ -1,42 +1,42 @@
 const initialImages = [
     {
             name: 'slider-1',
-        url: 'images/slider/slider-1.jpg',
+        url: '../images/slider/slider-1.jpg',
         _id: 1
     },
     {
         name: 'slider-2',
-        url: 'images/slider/slider-2.jpg',
+        url: '../images/slider/slider-2.jpg',
         _id: 2
     },
     {
         name: 'slider-3',
-        url: 'images/slider/slider-3.jpg',
+        url: '../images/slider/slider-3.jpg',
         _id: 3
     },
     {
         name: 'slider-4',
-        url: 'images/slider/slider-4.jpg',
+        url: '../images/slider/slider-4.jpg',
         _id: 4
     },
     {
         name: 'slider-5',
-        url: 'images/slider/slider-5.jpg',
+        url: '../images/slider/slider-5.jpg',
         _id: 5
     },
     {
         name: 'slider-6',
-        url: 'images/slider/slider-6.jpg',
+        url: '../images/slider/slider-6.jpg',
         _id: 6
     },
     {
         name: 'slider-7',
-        url: 'images/slider/slider-7.jpg',
+        url: '../images/slider/slider-7.jpg',
         _id: 7
     },
     {
         name: 'slider-8',
-        url: 'images/slider/slider-8.jpg',
+        url: '../images/slider/slider-8.jpg',
         _id: 8
     }
 ];
