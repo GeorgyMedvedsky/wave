@@ -2,16 +2,15 @@
 @import '../mixins';
 
 .feedback{
-    margin-top: 100px;
+    margin: 100px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 32px;
-    margin-bottom: 100px;
 
     &__form{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 50%;
     }
     &__input{
         padding: 18px;
@@ -38,10 +37,48 @@
         gap: 60px;
         padding: 52px;
         background-color: #F8F8F8;
-        width: 100%;
+        width: 50%;
+        box-sizing: border-box;
     }
     &__text{
         margin: 0;
         @include font($primary-font-color, 24px, normal, 400, normal, 0.6px);
+    }
+}
+
+@media (max-width: 1023.99px) {
+    .feedback{
+        margin: 70px 0;
+        flex-direction: column-reverse;
+        width: none;
+
+        &__info{
+            gap: 40px;
+            width: 100%;
+            padding: 40px;
+        }
+        &__text{
+            font-size: 18px;
+        }
+        &__form{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767.99px) {
+    .feedback{
+        margin: 40px 0;
+        flex-direction: column-reverse;
+        width: none;
+
+        &__info{
+            gap: 20px;
+            width: 100%;
+            padding: 30px;
+        }
+        &__text{
+            font-size: 16px;
+        }
     }
 }

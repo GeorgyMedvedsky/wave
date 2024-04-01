@@ -18,6 +18,7 @@
         padding: 10px;
         position: relative;
         transition: .3s;
+        font-size: 18px;
 
         &::after{
             content: '';
@@ -40,3 +41,17 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu__link{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767.99px) {
+    .menu__list{
+        display: none;
+    }
+    .menu__link{
+        font-size: 14px;
+    }
+}

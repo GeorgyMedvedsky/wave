@@ -23,7 +23,7 @@
         left: 0;
     }
     &__title{
-        width: 600px;
+        max-width: 600px;
         margin: 200px 0 0;
         @include font($font-color-light, 48px, normal, 400, 116.667%, 0.6px);
         z-index: 100;
@@ -48,5 +48,17 @@
     &:hover{
         cursor: pointer;
         opacity: .5;
+    }
+}
+
+@media (max-width: 767.99px) {
+    .slider{
+        &__title{
+            font-size: 28px;
+            max-width: 280px;
+        }
+        &__subtitle{
+            max-width: 240px;
+        }
     }
 }

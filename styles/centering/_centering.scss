@@ -1,3 +1,21 @@
 .centering{
-    padding: 0 calc(50% - 612px);
+    padding: 0 calc(50% - 640px);
+}
+
+@media (max-width: 1400px) {
+    .centering{
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .centering{
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .centering{
+        padding: 0 30px;
+    }
 }
