@@ -1,7 +1,7 @@
 const ACTIVE_TAB_COLOR = '#00B2A0';
 const DEFAULT_TAB_COLOR = '#FFFFFF';
 
-function slider(){
+function Slider(){
     const slider = document.querySelector('.slider');
     const sliderImages = Array.from(slider.querySelectorAll('.slider__image'));
     const tabList = slider.querySelector('.slider__pagination');
@@ -57,4 +57,4 @@ function slider(){
     }
 }
 
-slider();
+export default Slider;
