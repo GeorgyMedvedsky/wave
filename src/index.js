@@ -1,5 +1,5 @@
 import './vendor/normalize.css';
-import './styles/style.css';
+import './scss/index.scss';
 import Slider from "./scripts/slider";
 
 function setViewport() {

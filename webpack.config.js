@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const stylesHandler = MiniCssExtractPlugin.loader;
+
 module.exports = {
   entry: { main: './src/index.js' },
   output: {
@@ -30,8 +32,20 @@ module.exports = {
         type: 'asset/resource'
       },
       {
+        test: /\.s[ac]ss$/i,
+        use: [stylesHandler, "css-loader", "postcss-loader", {
+          loader: "sass-loader",
+          options: {
+            sourceMap: true,
+            sassOptions: {
+              includePaths: ["src/scss"]
+            }
+          }
+        }],
+      },
+      {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, {
+        use: [stylesHandler, {
           loader: 'css-loader',
           options: { importLoaders: 1 }
         },
