@@ -1,4 +1,8 @@
 .page{
     font-family: 'Roboto Condensed', sans-serif;
     min-width: 320px;
+
+    &_locked{
+        position: fixed;
+    }
 }
