@@ -67,7 +67,14 @@
         background-color: rgba($secondary-font-color, .8);
         z-index: 10;
         transform: translate(100%);
-        transition: .5s ease;
+        transition: transform .5s ease;
+
+        &:after:hover{
+            content: '';
+        }
+        &:active{
+            color: $font-color-highlight
+        }
 
         &_open{
             transform: translate(0);
@@ -84,11 +91,10 @@
         & > i{
             color: $font-color-light;
             font-size: 35px;
-
         }
         
-        &:hover{
-            cursor: pointer;
+        &:active{
+            opacity: .5;
         }
     }
 }
