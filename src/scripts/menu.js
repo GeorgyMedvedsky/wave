@@ -37,7 +37,10 @@ function handleToggleMenu() {
 }
 
 function handleOutsideClick(e) {
-    if(e.target === header) handleToggleMenu();
+    if(e.target === header) {
+        state.toggleVisible();
+        closeMenu();
+    }
 }
 
 export function setToggleMenuHandlers() {
